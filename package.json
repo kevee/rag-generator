@@ -1,0 +1,28 @@
+{
+  "name": "rag-generator",
+  "private": true,
+  "license": "Apache-2.0",
+  "version": "0.1.0",
+  "description": "Template for a grounded, citation-first chat assistant over your own documents or website (Claude + sqlite-vec + local embeddings)",
+  "packageManager": "pnpm@12.11.2",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -r --parallel --filter @rag-generator/api --filter @rag-generator/web dev",
+    "crawl": "pnpm --filter @rag-generator/crawler crawl",
+    "import": "pnpm --filter @rag-generator/crawler cli import",
+    "index": "pnpm --filter @rag-generator/crawler index",
+    "query": "pnpm --filter @rag-generator/crawler query",
+    "stats": "pnpm --filter @rag-generator/crawler stats",
+    "typecheck": "pnpm -r typecheck",
+    "prefetch-model": "pnpm --filter @rag-generator/crawler cli prefetch-model",
+    "build": "pnpm run prefetch-model && pnpm --filter @rag-generator/web build",
+    "start": "pnpm --filter @rag-generator/api start"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": "22.x",
+    "pnpm": "12.x"
+  }
+}

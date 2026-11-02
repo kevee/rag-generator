@@ -1,0 +1,79 @@
+{
+  "id": "example-org",
+  "name": "Example Organization",
+  "assistantName": "Example Assistant",
+  "contact": {
+    "name": "Example Organization help desk",
+    "url": "https://www.example.org/contact",
+    "phone": "(555) 010-0000",
+    "email": "help@example.org"
+  },
+  "copy": {
+    "headline": "How can we help you today?",
+    "intro": "Ask a question in plain language. Answers come only from Example Organization's published pages, and every answer links to the page it came from.",
+    "disclaimer": "This assistant can make mistakes and is not a substitute for talking to a person.",
+    "refusal": "I can't help with that request. Please contact the Example Organization help desk.",
+    "placeholder": "Ask a question…"
+  },
+  "prompt": {
+    "role": "You are an informational assistant for people who use Example Organization's services. You help them understand hours, locations, how to apply for or renew things, deadlines, fees, and who to contact.",
+    "neverDo": [
+      "give legal, medical, tax, or immigration advice, even if a source mentions a related program",
+      "promise an outcome, waive a fee, or make a decision that only staff can make",
+      "recommend one vendor, product, candidate, or viewpoint over another"
+    ],
+    "declineOffer": "offer to explain the relevant process or point to the right page or office instead",
+    "guidance": []
+  },
+  "crawl": {
+    "seeds": [
+      "https://www.example.org/help"
+    ],
+    "allowPrefixes": [
+      "https://www.example.org/help"
+    ],
+    "denyPatterns": [
+      "[?&](print|share|lang)=",
+      "\\\\.(jpe?g|png|gif|svg|webp|mp4|zip)$"
+    ],
+    "documentHosts": [
+      "www.example.org"
+    ]
+  },
+  "quickActions": [
+    {
+      "id": "hours",
+      "label": "Hours and locations",
+      "icon": "Clock",
+      "prompt": "What are Example Organization's hours and locations?",
+      "href": "https://www.example.org/help/hours"
+    },
+    {
+      "id": "apply",
+      "label": "How to apply",
+      "icon": "FileText",
+      "prompt": "How do I apply for a service at Example Organization, and what do I need to bring?",
+      "href": "https://www.example.org/help/apply"
+    },
+    {
+      "id": "fees",
+      "label": "Fees",
+      "icon": "Landmark",
+      "prompt": "What fees does Example Organization charge, and how can I pay them?",
+      "href": "https://www.example.org/help/fees"
+    },
+    {
+      "id": "contact",
+      "label": "Talk to a person",
+      "icon": "Phone",
+      "prompt": "How do I reach a person at Example Organization?",
+      "href": "https://www.example.org/contact"
+    }
+  ],
+  "suggestedQuestions": [
+    "Are you open on Saturdays?",
+    "How long does an application take?",
+    "Can I pay online?",
+    "Where do I park?"
+  ]
+}

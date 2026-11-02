@@ -1,0 +1,33 @@
+{
+  "name": "@rag-generator/crawler",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "cli": "tsx src/cli.ts",
+    "crawl": "tsx src/cli.ts crawl",
+    "index": "tsx src/cli.ts index",
+    "query": "tsx src/cli.ts query",
+    "stats": "tsx src/cli.ts stats"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "@rag-generator/retrieval": "workspace:*",
+    "@rag-generator/shared": "workspace:*",
+    "commander": "^15.0.0",
+    "jsdom": "^30.1.3",
+    "playwright": "^1.64.1",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
+    "unpdf": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^22.19.0",
+    "@types/turndown": "^5.0.6",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

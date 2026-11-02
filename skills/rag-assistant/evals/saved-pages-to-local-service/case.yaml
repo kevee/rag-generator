@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: saved-pages-to-local-service
+expected_outcome: |
+  Claude interviews the user before writing anything (audience, never-do list,
+  corpus form and URLs, quick actions, escalation contact, languages, hosting
+  intent, project name), reads the answers back, then scaffolds from the rum
+  template rather than inventing a stack, imports the saved pages with
+  `pnpm run import`, builds the index, checks retrieval with `pnpm query` on
+  the user's real questions, customizes sources.json and prompt.ts for a
+  library, starts the service locally, runs the smoke checks itself, and hands
+  the user the validation checklist instead of declaring success. It does not
+  deploy or pick a host.
